@@ -11,6 +11,7 @@ Features:-
 ->Shopping Cart: Displays selected items and the total cost, ensuring easy checkout.
 
 ->Admin Panel:
+
     1)Add new products to the inventory.
     
     2)View the complete list of available products.
