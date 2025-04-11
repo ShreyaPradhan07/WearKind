@@ -67,7 +67,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav-logo">
         <img src={logo}alt="" />
-        <p>Shopper</p>
+        <p>WearKind</p>
 
       </div>
       <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} alt="" />

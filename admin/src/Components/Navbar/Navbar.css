@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,14 +7,23 @@
     margin-bottom: 1px;
     background: white;
 
-}
+} */
 .nav-logo{
-    width:200px;
+    width:60px;
 
 }
 .nav-profile{
     width: 75px;
 
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Pushes first & last items to edges */
+    padding: 0 20px;  /* Optional - for spacing from left & right */
+}
+.together{
+    margin-left: -1200px;
 }
 @media(max-width:800px){
     .navbar{
