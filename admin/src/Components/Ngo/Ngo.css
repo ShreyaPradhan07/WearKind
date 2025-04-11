@@ -1,0 +1,72 @@
+/* Styling for NGO form container */
+.ngo-container {
+    width: 50%;
+    height:90%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+.ngo-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.ngo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styles */
+.ngo-form label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+/* Input styles */
+.ngo-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 98%;
+    outline: none;
+}
+
+/* Input focus effect */
+.ngo-form input:focus {
+    border-color: #007bff;
+}
+
+/* Submit button */
+.ngo-form button {
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top:75px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.ngo-form button:hover {
+    background: #0056b3;
+}
+
+/* Message styling */
+.ngo-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+

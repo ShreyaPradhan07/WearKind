@@ -39,10 +39,13 @@
 // export default App;
 
 import './App.css';
+import { useState } from 'react';
+import Donate from './Components/Donate/Donate';
 import Navbar from './Components/Navbar/Navbar';
 import Shop from './Pages/Shop';
 import Shopcategory from './Pages/Shopcategory';
 import Product from './Pages/Product';
+import Donation from './Pages/Donation';
 import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -51,8 +54,12 @@ import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kid_banner from './Components/Assets/banner_kids.png';
 import ShopcontextProvider from './Context/Shopcontext';
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 function App() {
+  const [isBarVisible, setIsBarVisible] = useState(true); 
   return (
     <ShopcontextProvider>
       <Router>
@@ -68,7 +75,9 @@ function App() {
           <Route exact path="/product/:productID" element={<Product />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/login" element={<LoginSignup />} />
+          <Route exact path="/donation" element={<Donation/>}/>
         </Routes>
+        <Donate isBarVisible={isBarVisible} setIsBarVisible={setIsBarVisible} /> {/* Pass state as prop */}
         <Footer />
       </Router>
     </ShopcontextProvider>

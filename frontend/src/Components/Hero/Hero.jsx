@@ -5,7 +5,7 @@ import arrow_icon from '../Assets/arrow.png'
 import hero_image from '../Assets/hero_image.png'
 const Hero = () => {
   return (
-    <div className='Hero'>
+    <div className='Hero animate_hero'>
         <div className="hero-left">
             <h2>NEW ARRIVALS ONLY</h2>
             <div>

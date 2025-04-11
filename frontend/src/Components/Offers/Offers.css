@@ -45,8 +45,17 @@
     justify-content: flex-end;
     padding-top: 50px;
 }
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .offers-right img{
     height:500px;
+    animation: zoomIn 1.5s forwards;
     
 }
 @media(max-width:1280px){
@@ -142,3 +151,21 @@
     }
 
 }
+
+@keyframes offers_slide {
+    0% {
+        /* transform: translateX(-100%); */
+        scale:0.4;
+        opacity:0.8;
+      }
+      50% {
+        /* transform: translateX(0); */
+        scale:1;
+        opacity: 1;
+      }
+  }
+  
+ .animate_offers {
+    animation: offers_slide linear;
+    animation-timeline: view();
+  }

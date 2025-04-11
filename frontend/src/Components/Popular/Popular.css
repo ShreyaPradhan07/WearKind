@@ -4,6 +4,7 @@
     align-items: center;
     gap:10px;
     height:90vh;
+     
 }
 .popular h1{
     color: #171717;
@@ -95,3 +96,20 @@
     }
     
 }
+@keyframes popular_slide {
+    0% {
+        /* transform: translateX(-100%); */
+        scale:0.4;
+        opacity:0.8;
+      }
+      50% {
+        /* transform: translateX(0); */
+        scale:1;
+        opacity: 1;
+      }
+  }
+  
+  .animate_popular {
+    animation: popular_slide linear;
+    animation-timeline: view();
+  }

@@ -25,8 +25,9 @@
     row-gap: 30px;;
 } */
 .shopcategory-products {
-    margin: 20px auto;  /* Centers the grid */
+    /* margin: 20px auto;  Centers the grid */
     display: grid;
+    margin-left:150px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;  /* Adds gap between both rows and columns */
     max-width: 1000px;  /* Optional: Set a max-width to control the size */

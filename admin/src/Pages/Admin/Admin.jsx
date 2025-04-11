@@ -4,6 +4,7 @@ import Sidebar from '../../Components/Sidebar/Sidebar';
 import { Route,Routes } from 'react-router-dom';
 import AddProduct from '../../Components/AddProduct/AddProduct';
 import ListProduct from '../../Components/ListProduct/ListProduct';
+import Ngo from '../../Components/Ngo/Ngo'
 const Admin = () => {
   return (
     <div className='admin'>
@@ -11,6 +12,7 @@ const Admin = () => {
         <Routes>
             <Route path='/addproduct' element={<AddProduct/>}/>
             <Route path='/listproduct' element={<ListProduct/>}/>
+            <Route path='/addngo' element={<Ngo/>}/>
         </Routes>
     </div>
   )

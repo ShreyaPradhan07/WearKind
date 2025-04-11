@@ -1,8 +1,21 @@
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Starts lfrom side */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Moves to original position */
+    }
+}
 .Hero{
     height: 100vh;
     /* background: linear-gradient(180deg,#e88fe8,#e1ffea22,60%); */
     display: flex;
     background:linear-gradient(180deg,#e88fe8,#d698cb22 60%);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start slightly below */
+    animation: slideIn 0.8s ease-out forwards; /* Run animation */
 }
 .hero-left{
     flex:1;
@@ -28,8 +41,26 @@
     align-items: center;
     gap:20px;
 }
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg); /* Rotate left */
+    }
+    50% {
+        transform: rotate(10deg);  /* Rotate right */
+    }
+    75% {
+        transform: rotate(-10deg); /* Rotate left again */
+    }
+    100% {
+        transform: rotate(0deg);   /* Back to original */
+    }
+}
 .hero-hand-icon img{
     width:105px;
+    animation: shake 1s ease-in-out infinite;
     
 }
 .hero-latest-btn{
@@ -53,8 +84,18 @@
     justify-content: center;
     
 }
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .hero-right img{
     height: 790px;
+    transform: scale(0); /* Start from 0 scale */
+    animation: zoomIn 1.5s forwards; /* Zoom in animation */
 }
 @media(max-width:1280px){
     .hero-left{
@@ -150,3 +191,21 @@
         font-size: 14px;
     }
 }
+
+@keyframes slideInFromLeft {
+    50% {
+        /* transform: translateX(-100%); */
+        scale:1;
+        opacity:1;
+      }
+      100% {
+        /* transform: translateX(0); */
+        scale:0.5;
+        opacity:0.5;
+      }
+  }
+  
+.animate_hero{
+    animation: slideInFromLeft linear;
+    animation-timeline: view();
+  }

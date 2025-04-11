@@ -45,7 +45,7 @@
     align-items: center;
     gap:45px;
 }
-.nav-login-cart button{
+/* .nav-login-cart button{
     width: 157px;
     height: 58px;
     outline:none;
@@ -56,9 +56,28 @@
     font-weight: 500;
     background: white;
     cursor: pointer;
-}
-.nav-login-cart button:active{
-    background: #f3f3f3;
+} */
+ .login_button{
+    width: 157px;
+    height: 58px;
+    outline:none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+    margin-top:5px;
+    margin-left: 120px;
+    
+ }
+/* .login_button:active{
+    background: #e496c6;
+} */
+.login_button:hover{
+    background: #622b62;
+    color:white;
 }
 .nav-cart-count{
     width: 22px;
@@ -76,6 +95,20 @@
 }
 .nav-dropdown{
     display: none;
+}
+.coin{
+    display: flex;
+    gap:0px;
+}
+.coin img{
+    height:70px;
+    /* margin-left:100px; */
+   
+}
+.coin p{
+    margin-right:20px;
+    margin-top:15px;
+   font-size: 20px;
 }
 @media(max-width:1280px){
     .navbar{

@@ -86,3 +86,33 @@
     }
     
 }
+
+@keyframes slide {
+    0% {
+        /* transform: translateX(-100%); */
+        scale:0.4;
+        opacity:0.8;
+      }
+      50% {
+        /* transform: translateX(0); */
+        scale:1;
+        opacity: 1;
+      }
+}
+@keyframes new_slide {
+    0% {
+        /* transform: translateX(-100%); */
+        scale:0.4;
+        opacity:0.8;
+      }
+      50% {
+        /* transform: translateX(0); */
+        scale:1;
+        opacity: 1;
+      }
+  }
+  
+  .animate_slide {
+    animation: new_slide linear;
+    animation-timeline: view();
+  }

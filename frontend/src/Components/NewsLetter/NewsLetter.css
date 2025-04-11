@@ -41,7 +41,8 @@
 .newsletter div button{
     width: 210px;
     height: 70px;
-    border-radius: 80px;
+    margin-bottom: 20px;
+    border-radius: 60px;
     color: white;
     font-size: 16px;
     cursor: pointer;

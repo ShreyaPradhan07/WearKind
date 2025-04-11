@@ -95,8 +95,11 @@ const ShopcontextProvider = (props) => {
         let totalAmount=0;
         for(const item in cartItems){
             if(cartItems[item]>0){
-                let itemInfo=all_product.find((product)=>product.id===Number(item))
-                totalAmount+=itemInfo.new_price * cartItems[item];
+                let itemInfo=all_product.find((product)=>product.id===Number(item));
+                if (itemInfo) {  // Ensure itemInfo is not undefined
+                    totalAmount += itemInfo.new_price * cartItems[item];
+                }
+                // totalAmount+=itemInfo.new_price * cartItems[item];
             }
         }return totalAmount;
     }
@@ -109,8 +112,47 @@ const ShopcontextProvider = (props) => {
     }
     return totalItem;
     }
+    //********************************************************* *
+    const [userData, setUserData] = useState({
+        coins: 0,           // User's coins
+        donationCount: 0, // Whether the discount has been applied or not
+    });
 
-    const contextValue= {getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart};
+    const fetchUserData = async () => {
+            const token = localStorage.getItem("auth-token"); // Assuming the token is saved in localStorage
+            // console.log(token);
+            if (!token) {
+                console.log("User is not authenticated.");
+                return;
+            }
+            // console.log("Token:", token);
+            const response = await fetch("http://localhost:4000/getuser", {
+                method: "GET",
+                headers: {
+                    "auth-token": token, // Send the token for authentication
+                    "Content-Type": "application/json",
+                },
+            });
+    
+            const data = await response.json();
+    
+            if (data.success) {
+                setUserData({
+                    coins: data.coins,
+                    donationCount: data.donationCount,
+                });
+                console.log("User Data Updated:", data.coins, data.donationCount);
+                return setUserData;
+            } else {
+                console.error("Failed to fetch user data:", data.errors);
+            }
+    }
+    // ******************************payment
+    
+    // ******************************payment
+    
+    //******************************************************** */
+    const contextValue= {getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart,fetchUserData,setCartItems};
     return (
         <Shopcontext.Provider value={contextValue}>
             {props.children}
