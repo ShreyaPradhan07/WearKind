@@ -34,3 +34,34 @@ Technologies Used:-
 
 ->Authentication: JWT or any preferred authentication method
 
+
+## ⚡ Setup Instructions  
+```bash
+
+### ⿡ Clone the repository and set up all parts  
+
+# Clone the repo
+git clone https://github.com/your-username/WearKind.git
+cd Shoppers-E-commerce-Website
+
+# Backend
+cd backend
+# Create a .env file with the following variables:
+# RAZORPAY_KEY_ID=your_razorpay_key
+# RAZORPAY_SECRET=your_razorpay_secret
+# MONGO_URI=your_mongodb_connection_uri
+node index.js
+# Runs on http://localhost:4000
+
+# Frontend
+cd ../frontend
+npm install
+npm run start
+# Runs on http://localhost:3000
+
+# Admin Panel
+cd ../admin
+npm install
+npm run dev
+# Runs on http://localhost:5173
+
