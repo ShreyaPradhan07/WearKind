@@ -28,7 +28,7 @@ app.use(cors());//access to frontend
 //The issue with the password Kawaii77Miwi// is that the forward slashes (/) are special characters 
 // in a MongoDB connection string and must be URL-encoded.
 // mongoose.connect("mongodb+srv://greatstackdev:Kawaii77Miwi//@cluster0.rgjsl.mongodb.net/e-commerce")
-mongoose.connect("mongodb+srv://greatstackdev:Kawaii77Miwi%2F%2F@cluster0.rgjsl.mongodb.net/e-commerce");
+mongoose.connect(process.env.MONGO_URI);
 
 //API creation
 app.get("/",(req,res)=>{
